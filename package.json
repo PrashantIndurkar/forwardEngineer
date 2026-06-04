@@ -6,7 +6,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "pnpm install --dir backend && pnpm install --dir frontend && pnpm --dir frontend build",
-    "start": "pnpm --dir backend start"
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm start --prefix backend"
   }
 }
