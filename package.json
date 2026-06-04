@@ -2,6 +2,9 @@
   "name": "ForwardEngineer",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "build": "pnpm install --dir backend && pnpm install --dir frontend && pnpm --dir frontend build",
     "start": "pnpm --dir backend start"
