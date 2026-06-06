@@ -2,10 +2,18 @@ import express from "express";
 import { ENV } from "./lib/env.js";
 import path from "path";
 import { connectDB } from "./lib/db.js";
+import cors from "cors";
+import { inngest } from "./lib/inngest.js";
 
 const app = express();
 
 const __dirname = path.resolve();
+
+// Middelware
+app.use(express.json());
+app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+app.use("/api/inngest", serve({client: inngest,functions}));
+
 
 app.get("/", (req, res) => {
   res.status(200).json({
