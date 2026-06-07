@@ -8,5 +8,8 @@
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm start --prefix backend"
+  },
+  "dependencies": {
+    "stream-chat": "^9.24.0"
   }
 }
