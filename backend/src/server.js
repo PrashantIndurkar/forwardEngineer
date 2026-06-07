@@ -47,7 +47,7 @@ const startServer = async () => {
   try {
     await connectDB();
     app.listen(ENV.PORT, () => {
-      if (env.NODE_ENV === "production") {
+      if (ENV.NODE_ENV === "production") {
         keepAliveRenderCron.start();
       }
       console.log(`Sever is running on: ${ENV.PORT}`);
